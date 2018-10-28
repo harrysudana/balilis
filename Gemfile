@@ -36,6 +36,15 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'devise' #User Authentication
+gem 'figaro'  #Keeps you API keys secure
+gem 'pundit' #Authorization
+gem 'kaminari' #Pagination
+gem 'twitter-bootstrap-rails' #Bootstrap
+gem 'bootstrap_form' #Bootstrap Forms
+gem 'font-awesome-rails' #Icons
+gem 'omniauth-facebook' #Facebook Login
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
