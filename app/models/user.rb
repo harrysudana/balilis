@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  devise :omniauthable, :omniauth_providers => [:facebook]
+  #devise :omniauthable, :omniauth_providers => [:facebook]
 
   enum role:[:user,:owner,:admin]
   has_many :properties, :foreign_key => 'owner_id' 
