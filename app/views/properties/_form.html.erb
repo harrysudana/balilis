@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="well">
+      <%= bootstrap_form_for @property do |f| %>
+
+      <% if current_user.errors.any? %>
+          <div id="error_explanation" class="errors">
+            <ul>
+            <% current_user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <%= f.text_field :title, placeholder: "Title Here...", label: "Title* (Required)" %>
+        <%= f.text_area :description, placeholder: "Add a description Here...", label: "Description* (Required)" %>
+        <%= f.text_field :location, placeholder: "Location Here...", label: "location* (Required)" %>
+        <%= f.url_field :url, placeholder: "http://...", label: "Url (Optional) - Must start with http://" %>
+        <%=  f.hidden_field :owner_id, :value => current_user.id unless @property.owner_id %>
+        <%= f.submit class: "btn btn-primary btn-outline btn-sm" %>
+      <% end %>
+    </div>
+  </div>
+</div>

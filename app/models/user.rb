@@ -7,7 +7,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   #devise :omniauthable, :omniauth_providers => [:facebook]
 
-  enum role:[:user,:owner,:admin]
+  enum role: [:user,:owner,:admin]
+
   has_many :properties, :foreign_key => 'owner_id' 
 
   def set_default_role

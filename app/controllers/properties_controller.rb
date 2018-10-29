@@ -12,6 +12,11 @@ class PropertiesController < ApplicationController
 		
 	end
 
+	def new
+		@property = Property.new
+		authorize @property
+	end
+
 	def create
 		@property = Property.new(property_params)
 		authorize @property
