@@ -40,6 +40,7 @@ gem 'devise' #User Authentication
 gem 'figaro'  #Keeps you API keys secure
 gem 'pundit' #Authorization
 gem 'kaminari' #Pagination
+gem 'jquery-rails'
 gem 'twitter-bootstrap-rails' #Bootstrap
 gem 'bootstrap_form' #Bootstrap Forms
 gem 'font-awesome-rails' #Icons
